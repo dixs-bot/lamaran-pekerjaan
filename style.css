@@ -13,6 +13,7 @@ body {
   background: #ffffff;
   color: #0f172a;
   line-height: 1.6;
+  transition: background 0.35s ease, color 0.35s ease;
 }
 
 a {
@@ -35,12 +36,14 @@ a {
   border-bottom: 1px solid #e4e4e7;
   padding: 0.7rem 0;
   z-index: 10;
+  display: flex;
 }
 
 .nav-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 .logo {
@@ -85,6 +88,22 @@ a {
 
 .nav-links a:hover {
   color: #2563eb;
+}
+
+/* Dark mode toggle button */
+.theme-toggle {
+  margin-left: 0.8rem;
+  padding: 0.4rem 0.7rem;
+  border: none;
+  border-radius: 8px;
+  background: #e4e4e7;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.theme-toggle:hover {
+  background: #d4d4d8;
 }
 
 /* HERO */
@@ -196,33 +215,6 @@ a {
   font-weight: 500;
 }
 
-/* PROJECTS */
-.project-card {
-  margin-top: 0.8rem;
-  padding: 1rem;
-  border-radius: 0.8rem;
-  background: #f4f4f5;
-  border: 1px solid #e4e4e7;
-}
-
-.project-card h3 {
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin-bottom: 0.3rem;
-}
-
-.project-card p {
-  font-size: 0.9rem;
-  color: #475569;
-}
-
-.project-tech {
-  margin-top: 0.4rem;
-  font-size: 0.82rem;
-  font-weight: 600;
-  color: #2563eb;
-}
-
 /* PROJECT MOCKUP GRID */
 .project-grid {
   display: grid;
@@ -244,6 +236,13 @@ a {
   width: 100%;
   border-radius: 0.6rem;
   margin-bottom: 0.4rem;
+  cursor: pointer;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.project-item img:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 22px rgba(15,23,42,0.18);
 }
 
 .project-title {
@@ -252,13 +251,6 @@ a {
   color: #2563eb;
 }
 
-.project-item:hover {
-  transform: translateY(-3px);
-  border-color: #2563eb;
-  box-shadow: 0 10px 20px rgba(15,23,42,0.12);
-}
-
-/* PROJECT BUTTONS */
 .project-buttons {
   display: flex;
   justify-content: center;
@@ -273,8 +265,8 @@ a {
   font-weight: 600;
   border: 2px solid transparent;
   cursor: pointer;
-  transition: 0.2s ease;
   text-transform: uppercase;
+  transition: .2s ease;
 }
 
 .preview-btn {
@@ -296,14 +288,8 @@ a {
   background: #2563eb;
   color: white;
 }
-/* responsive */
-@media(max-width:720px){
-  .project-grid {
-    grid-template-columns: 1fr;
-  }
-}
 
-/* EXPERIENCE / RIWAYAT PEKERJAAN */
+/* EXPERIENCE */
 .experience-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -319,11 +305,10 @@ a {
   transition: 0.25s ease;
 }
 
-.experience-card h3 {
-  font-size: 1.06rem;
-  font-weight: 700;
-  color: #0f172a;
-  margin-bottom: 0.35rem;
+.experience-card:hover {
+  transform: translateY(-4px);
+  border-color: #2563eb;
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.12);
 }
 
 .exp-position {
@@ -336,18 +321,6 @@ a {
   font-size: 0.83rem;
   color: #475569;
   margin-bottom: 0.45rem;
-}
-
-.exp-desc {
-  font-size: 0.88rem;
-  color: #475569;
-  line-height: 1.45;
-}
-
-.experience-card:hover {
-  transform: translateY(-4px);
-  border-color: #2563eb;
-  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.12);
 }
 
 /* BIODATA */
@@ -385,10 +358,6 @@ a {
   color: #64748b;
 }
 
-.biodata-table-wrapper {
-  flex: 1 1 260px;
-}
-
 .biodata-table {
   width: 100%;
   border-collapse: collapse;
@@ -407,34 +376,16 @@ a {
 
 .biodata-table th {
   width: 40%;
-  text-align: left;
   background: #eff6ff;
-  font-weight: 600;
   color: #1e293b;
-}
-
-.biodata-table tr:last-child th,
-.biodata-table tr:last-child td {
-  border-bottom: none;
-}
-
-.biodata-note {
-  font-size: 0.8rem;
-  color: #6b7280;
-  margin-top: 0.4rem;
+  font-weight: 600;
 }
 
 /* CONTACT */
 .contact-list {
-  margin-top: 0.5rem;
   list-style: none;
   font-size: 0.9rem;
   color: #475569;
-}
-
-.contact-list strong {
-  font-weight: 600;
-  color: #0f172a;
 }
 
 /* FOOTER */
@@ -464,49 +415,12 @@ a {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
   cursor: pointer;
   z-index: 20;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: 0.2s ease;
 }
 
 .wa-float:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.3);
-}
-
-/* RESPONSIVE */
-@media (max-width: 720px) {
-  .nav-links {
-    display: none;
-  }
-
-  .hero {
-    padding-top: 2rem;
-  }
-
-  .hero h1 {
-    font-size: 1.8rem;
-  }
-
-  .experience-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .biodata-layout {
-    flex-direction: column;
-  }
-
-  .biodata-photo-card {
-    margin-bottom: 0.6rem;
-  }
-}
-/* ANIMASI SCROLL */
-.reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.7s ease;
-}
-.reveal.show {
-  opacity: 1;
-  transform: translateY(0);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 26px rgba(0,0,0,.3);
 }
 
 /* POPUP FULLSCREEN */
@@ -520,7 +434,7 @@ a {
   opacity: 0;
   pointer-events: none;
   transition: 0.25s ease;
-  z-index: 50;
+  z-index: 100;
 }
 
 .popup-overlay.open {
@@ -541,12 +455,74 @@ a {
   to   { transform: scale(1); opacity: 1; }
 }
 
-.project-item img {
-  cursor: pointer;
-  transition: transform .25s ease, box-shadow .25s ease;
+/* SCROLL REVEAL ANIMATION */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.7s ease;
 }
 
-.project-item img:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 22px rgba(15,23,42,0.18);
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* DARK MODE */
+body[data-theme="dark"] {
+  background: #0f172a;
+  color: #f1f5f9;
+}
+
+body[data-theme="dark"] .navbar {
+  background: #1e293b;
+  border-bottom-color: #334155;
+}
+
+body[data-theme="dark"] .nav-links a {
+  color: #cbd5e1;
+}
+
+body[data-theme="dark"] .nav-links a:hover {
+  color: #60a5fa;
+}
+
+body[data-theme="dark"] .section p {
+  color: #cbd5e1;
+}
+
+body[data-theme="dark"] .project-item,
+body[data-theme="dark"] .experience-card,
+body[data-theme="dark"] .biodata-photo-card,
+body[data-theme="dark"] .biodata-table {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+body[data-theme="dark"] .project-title {
+  color: #60a5fa;
+}
+
+body[data-theme="dark"] .footer {
+  color: #cbd5e1;
+  border-top-color: #334155;
+}
+
+body[data-theme="dark"] .code-btn {
+  background: transparent;
+  border-color: #60a5fa;
+  color: #60a5fa;
+}
+
+body[data-theme="dark"] .code-btn:hover {
+  background: #60a5fa;
+  color: #0f172a;
+}
+
+/* RESPONSIVE */
+@media(max-width:720px){
+  .nav-links { display:none; }
+  .project-grid,
+  .experience-grid { grid-template-columns: 1fr; }
+  .biodata-layout { flex-direction: column; }
+  .biodata-photo-card { margin-bottom: 0.6rem; }
 }
