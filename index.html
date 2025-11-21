@@ -26,6 +26,7 @@
         <a href="#biodata">Biodata</a>
         <a href="#contact">Contact</a>
       </nav>
+      <button class="theme-toggle" id="theme-toggle">🌙</button>
     </div>
   </header>
 
@@ -286,6 +287,25 @@
 
   popupOverlay.addEventListener("click", ()=>{
     popupOverlay.classList.remove("open");
+  });
+</script>
+  <script>
+  // Dark mode toggle
+  const toggleBtn = document.getElementById("theme-toggle");
+
+  function applyTheme(theme) {
+    document.body.setAttribute("data-theme", theme);
+    toggleBtn.textContent = theme === "dark" ? "☀️" : "🌙";
+  }
+
+  // Cek localStorage
+  const savedTheme = localStorage.getItem("theme") || "light";
+  applyTheme(savedTheme);
+
+  toggleBtn.addEventListener("click", () => {
+    const newTheme = document.body.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    applyTheme(newTheme);
+    localStorage.setItem("theme", newTheme);
   });
 </script>
 </body>
