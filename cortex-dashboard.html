@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cortex Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body { margin:0; font-family: Arial, sans-serif; background:#0f172a; color:#e5e7eb; }
+    .wrap { max-width:900px; margin:20px auto; padding:16px; }
+    .top { display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; }
+    .logo { font-weight:bold; }
+    .pill { font-size:12px; padding:3px 8px; border-radius:999px; border:1px solid #334155; }
+    .grid { display:flex; gap:10px; margin-bottom:16px; }
+    .card { flex:1; padding:10px; border-radius:6px; background:#020617; border:1px solid #1f2937; font-size:13px; }
+    .metric { font-size:20px; font-weight:bold; margin:4px 0; }
+    .chart { height:150px; border-radius:6px; border:1px dashed #475569; display:flex; align-items:center; justify-content:center; font-size:12px; color:#9ca3af; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <div class="logo">Cortex Admin</div>
+      <div class="pill">Mockup Dashboard</div>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <div>Active Users</div>
+        <div class="metric">1.284</div>
+        <div>+12% vs last week</div>
+      </div>
+      <div class="card">
+        <div>Transactions</div>
+        <div class="metric">3.986</div>
+        <div>+4% this month</div>
+      </div>
+      <div class="card">
+        <div>Server Load</div>
+        <div class="metric">68%</div>
+        <div>Stable</div>
+      </div>
+    </div>
+
+    <div class="chart">
+      Area chart placeholder
+    </div>
+  </div>
+</body>
+</html>
