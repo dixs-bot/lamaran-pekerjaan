@@ -223,6 +223,48 @@ a {
   color: #2563eb;
 }
 
+/* PROJECT MOCKUP GRID */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 1rem;
+  margin-top: 0.8rem;
+}
+
+.project-item {
+  background: #f4f4f5;
+  border: 1px solid #e4e4e7;
+  border-radius: 0.8rem;
+  padding: 0.7rem;
+  text-align: center;
+  transition: 0.25s ease;
+}
+
+.project-item img {
+  width: 100%;
+  border-radius: 0.6rem;
+  margin-bottom: 0.4rem;
+}
+
+.project-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #2563eb;
+}
+
+.project-item:hover {
+  transform: translateY(-3px);
+  border-color: #2563eb;
+  box-shadow: 0 10px 20px rgba(15,23,42,0.12);
+}
+
+/* responsive */
+@media(max-width:720px){
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* EXPERIENCE / RIWAYAT PEKERJAAN */
 .experience-grid {
   display: grid;
