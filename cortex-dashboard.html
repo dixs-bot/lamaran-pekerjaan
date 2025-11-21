@@ -2,48 +2,154 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <title>Cortex Dashboard</title>
+  <title>Cortex Admin Dashboard</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
-    body { margin:0; font-family: Arial, sans-serif; background:#0f172a; color:#e5e7eb; }
-    .wrap { max-width:900px; margin:20px auto; padding:16px; }
-    .top { display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; }
-    .logo { font-weight:bold; }
-    .pill { font-size:12px; padding:3px 8px; border-radius:999px; border:1px solid #334155; }
-    .grid { display:flex; gap:10px; margin-bottom:16px; }
-    .card { flex:1; padding:10px; border-radius:6px; background:#020617; border:1px solid #1f2937; font-size:13px; }
-    .metric { font-size:20px; font-weight:bold; margin:4px 0; }
-    .chart { height:150px; border-radius:6px; border:1px dashed #475569; display:flex; align-items:center; justify-content:center; font-size:12px; color:#9ca3af; }
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{
+      font-family:"Poppins",sans-serif;
+      background:#020617;
+      color:#e5e7eb;
+      display:flex;
+      min-height:100vh;
+    }
+    .sidebar{
+      width:220px;
+      background:#020617;
+      border-right:1px solid #1f2937;
+      padding:1.2rem 1rem;
+    }
+    .logo{
+      font-weight:700;
+      font-size:1.1rem;
+      margin-bottom:1.5rem;
+      display:flex;
+      align-items:center;
+      gap:.4rem;
+    }
+    .logo-dot{
+      width:10px;height:10px;border-radius:999px;
+      background:linear-gradient(135deg,#3b82f6,#22c55e);
+    }
+    .menu{
+      display:flex;
+      flex-direction:column;
+      gap:.5rem;
+      font-size:.85rem;
+    }
+    .menu a{
+      color:#9ca3af;
+      text-decoration:none;
+      padding:.4rem .6rem;
+      border-radius:.45rem;
+    }
+    .menu a.active,
+    .menu a:hover{
+      background:#111827;
+      color:#e5e7eb;
+    }
+    .main{
+      flex:1;
+      padding:1.2rem 1.4rem;
+    }
+    .topbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-bottom:1.2rem;
+    }
+    .topbar h1{
+      font-size:1.1rem;
+    }
+    .pill{
+      font-size:.75rem;
+      padding:.25rem .5rem;
+      border-radius:999px;
+      border:1px solid #1f2937;
+      color:#9ca3af;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:1rem;
+    }
+    .card{
+      background:#020617;
+      border-radius:.8rem;
+      border:1px solid #1f2937;
+      padding:.8rem;
+      font-size:.8rem;
+    }
+    .card h2{
+      font-size:.85rem;
+      margin-bottom:.3rem;
+    }
+    .metric{
+      font-size:1.4rem;
+      font-weight:600;
+      margin:.15rem 0;
+    }
+    .chip{
+      font-size:.7rem;
+      color:#22c55e;
+    }
+    .chart-placeholder{
+      height:160px;
+      border-radius:.7rem;
+      border:1px dashed #374151;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:.8rem;
+      color:#6b7280;
+      margin-top:.7rem;
+    }
+    @media(max-width:768px){
+      body{flex-direction:column;}
+      .sidebar{width:100%;border-right:none;border-bottom:1px solid #1f2937;display:flex;align-items:center;justify-content:space-between;}
+      .grid{grid-template-columns:1fr;}
+    }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <div class="top">
-      <div class="logo">Cortex Admin</div>
-      <div class="pill">Mockup Dashboard</div>
+  <aside class="sidebar">
+    <div class="logo">
+      <span class="logo-dot"></span>Cortex
     </div>
-
+    <nav class="menu">
+      <a href="#" class="active">Overview</a>
+      <a href="#">Analytics</a>
+      <a href="#">Users</a>
+      <a href="#">Settings</a>
+    </nav>
+  </aside>
+  <main class="main">
+    <div class="topbar">
+      <h1>Admin Dashboard</h1>
+      <span class="pill">Preview Mockup • v1</span>
+    </div>
     <div class="grid">
       <div class="card">
-        <div>Active Users</div>
-        <div class="metric">1.284</div>
-        <div>+12% vs last week</div>
+        <h2>Active Users</h2>
+        <p class="metric">1.284</p>
+        <p class="chip">+12% vs last week</p>
       </div>
       <div class="card">
-        <div>Transactions</div>
-        <div class="metric">3.986</div>
-        <div>+4% this month</div>
+        <h2>Transactions</h2>
+        <p class="metric">3.986</p>
+        <p class="chip">+4% this month</p>
       </div>
       <div class="card">
-        <div>Server Load</div>
-        <div class="metric">68%</div>
-        <div>Stable</div>
+        <h2>Server Load</h2>
+        <p class="metric">68%</p>
+        <p class="chip">Stable</p>
       </div>
     </div>
 
-    <div class="chart">
-      Area chart placeholder
+    <div class="chart-placeholder">
+      Area Chart Placeholder (Traffic, Conversion, Revenue)
     </div>
-  </div>
+  </main>
 </body>
 </html>
