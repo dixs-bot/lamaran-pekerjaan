@@ -256,5 +256,35 @@
   >
     WA
   </a>
+<!-- ANIMASI SCROLL & POPUP -->
+<script>
+  // ANIMASI SCROLL
+  const elements = document.querySelectorAll(".reveal");
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add("show");
+      }
+    });
+  },{
+    threshold:0.1
+  });
+  elements.forEach(el=>observer.observe(el));
+
+  // POPUP GAMBAR
+  const popupImg = document.getElementById("popup-img");
+  const popupOverlay = document.getElementById("popup-overlay");
+
+  document.querySelectorAll(".project-item img").forEach(img=>{
+    img.addEventListener("click", ()=>{
+      popupImg.src = img.src;
+      popupOverlay.classList.add("open");
+    });
+  });
+
+  popupOverlay.addEventListener("click", ()=>{
+    popupOverlay.classList.remove("open");
+  });
+</script>
 </body>
 </html>
