@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio - Diki Wahyudin</title>
 
-  <!-- PENTING: nama file harus persis style.css -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -23,6 +22,8 @@
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#biodata">Biodata</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -90,35 +91,124 @@
     </div>
   </section>
 
+  <!-- RIWAYAT PEKERJAAN -->
+  <section id="experience" class="section">
+    <div class="container">
+      <h2>Riwayat Pekerjaan</h2>
+      <p class="section-note">Berikut adalah pengalaman kerja yang pernah saya jalani (isi sendiri nanti):</p>
+
+      <div class="experience-grid">
+
+        <!-- CARD 1 -->
+        <div class="experience-card">
+          <h3>[Nama Perusahaan 1]</h3>
+          <p class="exp-position"><strong>[Posisi / Jabatan]</strong></p>
+          <p class="exp-year">[Tahun Masuk] - [Tahun Keluar]</p>
+          <p class="exp-desc">
+            [Deskripsi pekerjaan yang saya lakukan, tanggung jawab utama atau pencapaian singkat.]
+          </p>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="experience-card">
+          <h3>[Nama Perusahaan 2]</h3>
+          <p class="exp-position"><strong>[Posisi / Jabatan]</strong></p>
+          <p class="exp-year">[Tahun Masuk] - [Tahun Keluar]</p>
+          <p class="exp-desc">
+            [Deskripsi pekerjaan yang saya lakukan, tanggung jawab utama atau pencapaian singkat.]
+          </p>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="experience-card">
+          <h3>[Nama Perusahaan 3]</h3>
+          <p class="exp-position"><strong>[Posisi / Jabatan]</strong></p>
+          <p class="exp-year">[Tahun Masuk] - [Tahun Keluar]</p>
+          <p class="exp-desc">
+            [Deskripsi pekerjaan yang saya lakukan, tanggung jawab utama atau pencapaian singkat.]
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- BIODATA -->
-<section id="biodata" class="section">
-  <div class="container">
-    <h2>Biodata</h2>
-    <ul class="biodata-list">
-      <li><strong>Nama Lengkap:</strong> Diki Wahyudin</li>
-      <li><strong>Tempat, Tanggal Lahir:</strong> [Nama kota], [dd-mm-yyyy]</li>
-      <li><strong>Alamat Domisili:</strong> [Alamat lengkap]</li>
-      <li><strong>Status:</strong> [Lajang / Menikah]</li>
-      <li><strong>Jenis Kelamin:</strong> Laki-laki</li>
-      <li><strong>Agama:</strong> [Agama]</li>
-      <li><strong>Pendidikan Terakhir:</strong> [SMA/SMK/D3/S1 Jurusan]</li>
-      <li><strong>No. WhatsApp:</strong> 0851-8997-6233</li>
-      <li><strong>Email:</strong> emailkamu@example.com</li>
-    </ul>
-  </div>
-</section>
-  
+  <section id="biodata" class="section">
+    <div class="container">
+      <h2>Biodata</h2>
+
+      <div class="biodata-layout">
+        <!-- FOTO PROFIL -->
+        <div class="biodata-photo-card">
+          <!-- GANTI src dengan nama file foto kamu, misal: foto-diki.jpg -->
+          <img
+            src="https://via.placeholder.com/160x160.png?text=DW"
+            alt="Foto Profil Diki Wahyudin"
+          />
+          <p class="biodata-name">Diki Wahyudin</p>
+          <p class="biodata-caption">[Posisi yang ingin dilamar]</p>
+        </div>
+
+        <!-- TABEL BIODATA -->
+        <div class="biodata-table-wrapper">
+          <table class="biodata-table">
+            <tbody>
+              <tr>
+                <th>Nama Lengkap</th>
+                <td>Diki Wahyudin</td>
+              </tr>
+              <tr>
+                <th>Tempat, Tanggal Lahir</th>
+                <td>[Kota], [dd-mm-yyyy]</td>
+              </tr>
+              <tr>
+                <th>Alamat Domisili</th>
+                <td>[Alamat lengkap saat ini]</td>
+              </tr>
+              <tr>
+                <th>Status</th>
+                <td>[Lajang / Menikah]</td>
+              </tr>
+              <tr>
+                <th>Jenis Kelamin</th>
+                <td>Laki-laki</td>
+              </tr>
+              <tr>
+                <th>Pendidikan Terakhir</th>
+                <td>[SMK/SMA/D3/S1] – [Jurusan]</td>
+              </tr>
+              <tr>
+                <th>No. WhatsApp</th>
+                <td>0851 8997 6233</td>
+              </tr>
+              <tr>
+                <th>Email</th>
+                <td>emailkamu@example.com</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="biodata-note">
+            *Silakan ganti isi tabel ini dengan data asli kamu di file <code>index.html</code>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- CONTACT -->
   <section id="contact" class="section">
     <div class="container">
       <h2>Contact</h2>
       <p>
-        Untuk proses rekrutmen atau komunikasi lebih lanjut, silakan hubungi saya melalui:
+        Untuk proses rekrutmen atau komunikasi lebih lanjut, silakan hubungi saya melalui WhatsApp:
       </p>
       <ul class="contact-list">
-        <li>Email: <strong>emailkamu@example.com</strong></li>
         <li>WhatsApp: <strong>+62 851 8997 6233</strong></li>
       </ul>
+      <p class="section-note">
+        Tombol WhatsApp melayang di kanan bawah akan langsung membuka chat dengan saya.
+      </p>
     </div>
   </section>
 
@@ -128,5 +218,15 @@
       <p>© 2025 Diki Wahyudin · Simple Portfolio</p>
     </div>
   </footer>
+
+  <!-- WHATSAPP FLOATING BUTTON -->
+  <a
+    href="https://wa.me/6285189976233"
+    class="wa-float"
+    target="_blank"
+    rel="noopener"
+  >
+    WA
+  </a>
 </body>
 </html>
