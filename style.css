@@ -116,6 +116,16 @@ a {
   padding: 2.6rem 0 2.2rem;
 }
 
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* agar full background */
+  z-index: 0;           /* video di bawah teks */
+  opacity: 0.32;        /* atur transparansi sesuai selera */
+}
+
 .hero-text {
   max-width: 640px;
 }
