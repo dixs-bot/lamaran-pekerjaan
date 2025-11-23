@@ -535,3 +535,48 @@ body[data-theme="light"] .wa-float {
   cursor: pointer;
   font-size: 18px;
 }
+/* ===== FIX TEXT COLOR ON LIGHT MODE ===== */
+body[data-theme="light"] {
+  color: #0f172a !important;
+}
+
+/* All headings */
+body[data-theme="light"] h1,
+body[data-theme="light"] h2,
+body[data-theme="light"] h3,
+body[data-theme="light"] h4,
+body[data-theme="light"] h5,
+body[data-theme="light"] h6 {
+  color: #0f172a !important;
+}
+
+/* Paragraph and lists */
+body[data-theme="light"] p,
+body[data-theme="light"] li,
+body[data-theme="light"] span,
+body[data-theme="light"] td,
+body[data-theme="light"] th {
+  color: #0f172a !important;
+}
+
+/* Hero subtitle & role */
+body[data-theme="light"] .hero-role,
+body[data-theme="light"] .hero-summary {
+  color: #0f172a !important;
+}
+
+/* Timeline text */
+body[data-theme="light"] .timeline-period,
+body[data-theme="light"] .timeline-role {
+  color: #0f172a !important;
+}
+
+/* Biodata label */
+body[data-theme="light"] .biodata-table th {
+  color: #0f172a !important;
+}
+
+/* Links */
+body[data-theme="light"] a {
+  color: #0f172a !important;
+}
