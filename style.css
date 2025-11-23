@@ -471,3 +471,67 @@ a {
     justify-self: center;
   }
 }
+/* ===== LIGHT MODE ===== */
+body[data-theme="light"] {
+  background: #f4f4f5;
+  color: #0f172a;
+}
+
+body[data-theme="light"] .topbar,
+body[data-theme="light"] .section,
+body[data-theme="light"] .footer,
+body[data-theme="light"] .card,
+body[data-theme="light"] .timeline-item,
+body[data-theme="light"] .biodata-table,
+body[data-theme="light"] .project-item {
+  background: #ffffff;
+  border-color: #e5e5e5;
+}
+
+body[data-theme="light"] h2,
+body[data-theme="light"] .project-title,
+body[data-theme="light"] .timeline-title {
+  color: #0f172a;
+}
+
+body[data-theme="light"] .timeline-role {
+  color: #22c55e;
+}
+
+body[data-theme="light"] .nav a {
+  color: #374151;
+}
+
+body[data-theme="light"] .nav a:hover {
+  color: #22c55e;
+}
+
+body[data-theme="light"] .project-link {
+  color: #2563eb;
+}
+
+/* HERO MODE LIGHT */
+body[data-theme="light"] .hero-overlay {
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.65),
+    rgba(255, 255, 255, 0.7)
+  );
+}
+
+/* WA BUTTON LIGHT */
+body[data-theme="light"] .wa-float {
+  background: #22c55e;
+  color: #ffffff;
+}
+
+/* TOGGLE BUTTON */
+.theme-toggle {
+  margin-left: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid #22c55e;
+  background: transparent;
+  color: #22c55e;
+  cursor: pointer;
+  font-size: 18px;
+}
