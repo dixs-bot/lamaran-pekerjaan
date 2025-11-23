@@ -590,7 +590,7 @@ body[data-theme="light"] a {
 .biodata-table th,
 .biodata-table td {
   color: #ffffff !important;             /* text putih */
-  border-bottom: 1px solid #333 !important;
+  border-bottom: 1px solid #22c55e !important;
 }
 
 .biodata-table th {
