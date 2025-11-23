@@ -89,31 +89,9 @@ a {
 /* HERO */
 .hero {
   position: relative;
-  background: radial-gradient(circle at top, #0b1220, #020617 60%);
-  border-bottom: 1px solid #1f2933;
-}
-
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background-image: linear-gradient(
-      rgba(15, 23, 42, 0.8),
-      rgba(15, 23, 42, 0.9)
-    ),
-    repeating-linear-gradient(
-      to bottom,
-      rgba(34, 197, 94, 0.12),
-      rgba(34, 197, 94, 0.12) 1px,
-      transparent 1px,
-      transparent 3px
-    );
-  opacity: 0.9;
-}
-
-.hero-inner {
-  position: relative;
-  padding: 2.6rem 0 2.2rem;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
 }
 
 .hero-video {
@@ -121,9 +99,21 @@ a {
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;   /* agar full background */
-  z-index: 0;           /* video di bawah teks */
-  opacity: 0.32;        /* atur transparansi sesuai selera */
+  object-fit: cover;
+  z-index: 0;
+  opacity: 1;
+  filter: brightness(1.45); /* adjust brightness */
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 2;
 }
 
 .hero-text {
