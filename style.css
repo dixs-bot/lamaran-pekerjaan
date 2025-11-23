@@ -10,9 +10,10 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background: #020617; /* very dark navy */
+  background: #020617;
   color: #e5e7eb;
   line-height: 1.6;
+  transition: background 0.35s ease, color 0.35s ease;
 }
 
 a {
@@ -27,7 +28,7 @@ a {
   padding: 0 1.25rem;
 }
 
-/* TOPBAR */
+/* ======================= NAVBAR ======================= */
 .topbar {
   background: #020617;
   border-bottom: 1px solid #1f2933;
@@ -86,7 +87,19 @@ a {
   color: #22c55e;
 }
 
-/* HERO */
+/* MODE BUTTON */
+.theme-toggle {
+  margin-left: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid #22c55e;
+  background: transparent;
+  color: #22c55e;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* ======================= HERO ======================= */
 .hero {
   position: relative;
   min-height: 100vh;
@@ -94,40 +107,32 @@ a {
   overflow: hidden;
 }
 
-/* VIDEO BACKGROUND */
 .hero-video {
   position: absolute;
   inset: 0;
   width: 100%;
-  height: 120%;       /* sedikit lebih tinggi untuk parallax */
+  height: 120%;
   object-fit: cover;
-  z-index: 0;
-  opacity: 1;
   filter: brightness(1.45) saturate(1.2) contrast(1.1);
-  transform: translateY(0);        /* akan diubah dari JS */
-  will-change: transform;          /* bantu performa */
+  transform: translateY(0);
+  will-change: transform;
+  z-index: 0;
 }
 
-/* OVERLAY + TEKS */
 .hero-overlay {
   position: absolute;
   inset: 0;
-  z-index: 1;
-  pointer-events: none;
   background-image: linear-gradient(
       rgba(15, 23, 42, 0.75),
       rgba(15, 23, 42, 0.9)
     );
+  z-index: 1;
 }
 
 .hero-inner {
   position: relative;
   z-index: 2;
-  padding: 2.6rem 0 2.2rem;
-}
-
-.hero-text {
-  max-width: 640px;
+  padding: 3rem 0 2.2rem;
 }
 
 .hacker-label {
@@ -135,8 +140,6 @@ a {
   font-size: 0.7rem;
   letter-spacing: 0.16em;
   color: #22c55e;
-  text-transform: uppercase;
-  margin-bottom: 0.4rem;
 }
 
 .hacker-heading {
@@ -160,8 +163,8 @@ a {
 
 .hero-actions {
   display: flex;
-  flex-wrap: wrap;
   gap: 0.6rem;
+  flex-wrap: wrap;
 }
 
 /* BUTTONS */
@@ -170,20 +173,14 @@ a {
   border-radius: 999px;
   font-size: 0.85rem;
   font-weight: 600;
-  border: 1px solid transparent;
   cursor: pointer;
-  display: inline-block;
+  border: 1px solid transparent;
 }
 
 .btn-primary {
   background: #22c55e;
   color: #020617;
-  border-color: #22c55e;
   box-shadow: 0 0 18px rgba(34, 197, 94, 0.5);
-}
-
-.btn-primary:hover {
-  background: #16a34a;
 }
 
 .btn-outline {
@@ -192,11 +189,7 @@ a {
   border-color: #22c55e;
 }
 
-.btn-outline:hover {
-  background: rgba(34, 197, 94, 0.08);
-}
-
-/* SECTIONS */
+/* ======================= SECTIONS ======================= */
 .section {
   padding: 2.2rem 0;
   border-bottom: 1px solid #111827;
@@ -205,7 +198,6 @@ a {
 .section h2 {
   font-size: 1.3rem;
   margin-bottom: 0.6rem;
-  color: #e5e7eb;
 }
 
 .section p {
@@ -213,96 +205,18 @@ a {
   color: #cbd5f5;
 }
 
-.section-note {
-  font-size: 0.8rem;
-  color: #9ca3af;
-  margin-bottom: 0.6rem;
-}
-
-/* GRID / CARD */
-.grid-two {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
-}
-
-.card {
-  background: #020617;
-  border-radius: 0.8rem;
-  border: 1px solid #1f2933;
-  box-shadow: 0 0 16px rgba(15, 23, 42, 0.7);
-  padding: 1rem;
-  font-size: 0.9rem;
-}
-
-.card h3 {
-  font-size: 1rem;
-  margin-bottom: 0.4rem;
-  color: #bbf7d0;
-}
-
-.card ul {
-  padding-left: 1.1rem;
-}
-
-.card li {
-  margin-bottom: 0.25rem;
-}
-
-/* TIMELINE */
-.timeline {
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-}
-
-.timeline-item {
-  background: #020617;
-  border-radius: 0.8rem;
-  border: 1px solid #1f2933;
-  padding: 0.9rem;
-  font-size: 0.88rem;
-  box-shadow: 0 0 12px rgba(15, 23, 42, 0.7);
-}
-
-.timeline-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 0.1rem;
-}
-
-.timeline-title {
-  font-weight: 600;
-  color: #e5e7eb;
-}
-
-.timeline-period {
-  font-size: 0.78rem;
-  color: #9ca3af;
-}
-
-.timeline-role {
-  font-size: 0.86rem;
-  font-weight: 500;
-  color: #22c55e;
-  margin-bottom: 0.3rem;
-}
-
-/* PROJECTS */
+/* ======================= PROJECT ======================= */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
 }
 
 .project-item {
   background: #020617;
   border-radius: 0.8rem;
-  border: 1px solid #1f2933;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
+  border: 1px solid #1f2933;
   box-shadow: 0 0 16px rgba(15, 23, 42, 0.7);
 }
 
@@ -312,320 +226,106 @@ a {
   object-fit: cover;
 }
 
-.project-body {
-  padding: 0.7rem 0.8rem 0.9rem;
-  font-size: 0.88rem;
-}
-
-.project-title {
-  font-weight: 600;
-  margin-bottom: 0.25rem;
-  color: #bbf7d0;
-}
-
-.project-link {
-  display: inline-block;
-  margin-top: 0.35rem;
-  font-size: 0.82rem;
-  color: #22c55e;
-}
-
-/* BIODATA */
+/* ======================= BIODATA ======================= */
 .biodata-layout {
   display: grid;
-  grid-template-columns: 180px minmax(0, 1fr);
+  grid-template-columns: 180px 1fr;
   gap: 1rem;
-  align-items: flex-start;
 }
 
 .photo-box img {
   width: 180px;
   height: 180px;
-  border-radius: 0.8rem;
   object-fit: cover;
-  border: 1px solid #1f2933;
-  background: #020617;
+  border-radius: 0.8rem;
+  border: 2px solid #22c55e;
+  box-shadow: 0 0 14px rgba(34, 197, 94, 0.5);
 }
 
 .biodata-table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.9rem;
-  background: #020617;
-  border-radius: 0.8rem;
-  overflow: hidden;
-  border: 1px solid #1f2933;
+  background: none !important;
+  border: none !important;
 }
 
 .biodata-table th,
 .biodata-table td {
   padding: 0.55rem 0.8rem;
-  border-bottom: 1px solid #111827;
+  border-bottom: 1px solid #22c55e;
+  font-size: 0.9rem;
 }
 
 .biodata-table th {
   width: 35%;
   text-align: left;
-  background: #020617;
-  color: #bbf7d0;
-  font-weight: 500;
-  border-right: 1px solid #111827;
-}
-
-.biodata-table tr:last-child th,
-.biodata-table tr:last-child td {
-  border-bottom: none;
-}
-
-/* CONTACT */
-.contact-list {
-  list-style: none;
-  margin-top: 0.4rem;
-  font-size: 0.9rem;
-  color: #cbd5f5;
-}
-
-.contact-list strong {
   font-weight: 600;
-  color: #bbf7d0;
 }
 
-/* FOOTER */
+/* ======================= FOOTER ======================= */
 .footer {
-  border-top: 1px solid #111827;
-  background: #020617;
   text-align: center;
   padding: 1.2rem 0;
-  font-size: 0.82rem;
   color: #9ca3af;
+  border-top: 1px solid #111827;
 }
 
-/* TOMBOL WHATSAPP MELAYANG */
+/* ======================= WA FLOAT ======================= */
 .wa-float {
   position: fixed;
   right: 16px;
   bottom: 16px;
-  width: 64px;           /* agak lebih besar */
+  width: 64px;
   height: 64px;
   border-radius: 999px;
   background: #22c55e;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #020617;
-  z-index: 30;
-  cursor: pointer;
-  /* animasi glow pelan */
-  box-shadow: 0 0 10px rgba(34, 197, 94, 0.6);
   animation: waGlow 2s ease-in-out infinite;
   transition: transform 0.25s ease;
+  z-index: 50;
 }
 
 .wa-float:hover {
   transform: scale(1.12) translateY(-2px);
 }
 
-/* ICON DI DALAM TOMBOL */
 .wa-icon {
-  width: 34px;    /* ikonnya ikut membesar */
+  width: 34px;
   height: 34px;
   filter: drop-shadow(0 0 8px rgba(34, 197, 94, 0.9));
 }
 
-/* KEYFRAMES ANIMASI GLOW */
 @keyframes waGlow {
-  0% {
-    box-shadow: 0 0 10px rgba(34, 197, 94, 0.4);
-  }
-  50% {
-    box-shadow: 0 0 22px rgba(34, 197, 94, 1);
-  }
-  100% {
-    box-shadow: 0 0 10px rgba(34, 197, 94, 0.4);
-  }
+  0% { box-shadow: 0 0 10px rgba(34, 197, 94, 0.4); }
+  50% { box-shadow: 0 0 25px rgba(34, 197, 94, 1); }
+  100% { box-shadow: 0 0 10px rgba(34, 197, 94, 0.4); }
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .nav {
-    display: none;
-  }
-
-  .hero-inner {
-    padding-top: 2rem;
-  }
-
-  .grid-two {
-    grid-template-columns: 1fr;
-  }
-
-  .project-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .biodata-layout {
-    grid-template-columns: 1fr;
-  }
-
-  .photo-box {
-    justify-self: center;
-  }
-}
-/* ===== LIGHT MODE ===== */
+/* ======================= LIGHT MODE ======================= */
 body[data-theme="light"] {
-  background: #f4f4f5;
-  color: #0f172a;
-}
-
-body[data-theme="light"] .topbar,
-body[data-theme="light"] .section,
-body[data-theme="light"] .footer,
-body[data-theme="light"] .card,
-body[data-theme="light"] .timeline-item,
-body[data-theme="light"] .biodata-table,
-body[data-theme="light"] .project-item {
   background: #ffffff;
-  border-color: #e5e5e5;
+  color: #000000;
 }
 
-body[data-theme="light"] h2,
-body[data-theme="light"] .project-title,
-body[data-theme="light"] .timeline-title {
-  color: #0f172a;
-}
-
-body[data-theme="light"] .timeline-role {
-  color: #22c55e;
-}
-
-body[data-theme="light"] .nav a {
-  color: #374151;
-}
-
-body[data-theme="light"] .nav a:hover {
-  color: #22c55e;
-}
-
-body[data-theme="light"] .project-link {
-  color: #2563eb;
-}
-
-/* HERO MODE LIGHT */
 body[data-theme="light"] .hero-overlay {
   background-image: linear-gradient(
     rgba(255, 255, 255, 0.65),
-    rgba(255, 255, 255, 0.7)
+    rgba(255, 255, 255, 0.8)
   );
 }
 
-/* WA BUTTON LIGHT */
-body[data-theme="light"] .wa-float {
-  background: #22c55e;
-  color: #ffffff;
-}
-
-/* TOGGLE BUTTON */
-.theme-toggle {
-  margin-left: 12px;
-  padding: 6px 10px;
-  border-radius: 999px;
-  border: 1px solid #22c55e;
-  background: transparent;
-  color: #22c55e;
-  cursor: pointer;
-  font-size: 18px;
-}
-/* ===== FIX TEXT COLOR ON LIGHT MODE ===== */
-body[data-theme="light"] {
-  color: #000000 !important;
-}
-
-/* All headings */
+body[data-theme="light"] .biodata-table th,
+body[data-theme="light"] .biodata-table td,
+body[data-theme="light"] p,
 body[data-theme="light"] h1,
 body[data-theme="light"] h2,
 body[data-theme="light"] h3,
-body[data-theme="light"] h4,
-body[data-theme="light"] h5,
-body[data-theme="light"] h6 {
-  color: #000000 !important;
-}
-
-/* Paragraph and lists */
-body[data-theme="light"] p,
-body[data-theme="light"] li,
-body[data-theme="light"] span,
-body[data-theme="light"] td,
-body[data-theme="light"] th {
-  color: #000000 !important;
-}
-
-/* Hero subtitle & role */
-body[data-theme="light"] .hero-role,
-body[data-theme="light"] .hero-summary {
-  color: #000000 !important;
-}
-
-/* Timeline text */
-body[data-theme="light"] .timeline-period,
-body[data-theme="light"] .timeline-role {
-  color: #000000 !important;
-}
-
-/* Biodata label */
-body[data-theme="light"] .biodata-table th {
-  color: #0f172a !important;
-}
-
-/* Links */
 body[data-theme="light"] a {
   color: #000000 !important;
 }
-/* ===== FIX BIODATA ON DARK MODE / FULL BLACK ===== */
-.biodata-table {
-  background: #0a0a0a !important;        /* hitam pekat */
-  color: #ffffff !important;             /* buat text putih */
-  border: 1px solid #333 !important;     /* border abu gelap */
-}
 
-.biodata-table th,
-.biodata-table td {
-  color: #ffffff !important;             /* text putih */
-  border-bottom: 1px solid #22c55e !important;
-}
-
-.biodata-table th {
-  background: #111 !important;           /* header sedikit lebih terang */
-  font-weight: 600;
-}
-
-.biodata-table tr:last-child td,
-.biodata-table tr:last-child th {
-  border-bottom: none;
-}
-
-/* Foto biodata border */
-.photo-box img {
-  border: 2px solid #22c55e;             /* aksen neon biar keren */
-}
-/* ===== FIX BIODATA ON LIGHT MODE (WHITE MODE) ===== */
-body[data-theme="light"] .biodata-table {
-  background: #000000 !important;      /* full black */
-  color: #ffffff !important;           /* text white */
-  border: 1px solid #22c55e !important;  /* neon border */
-}
-
-body[data-theme="light"] .biodata-table th,
-body[data-theme="light"] .biodata-table td {
-  color: #ffffff !important;           /* text color white */
-  border-bottom: 1px solid #22c55e !important; /* neon green lines */
-}
-
-body[data-theme="light"] .biodata-table th {
-  background: #0a0a0a !important;      /* header slightly lighter black */
-  font-weight: 600;
-}
-
-/* FOTO FRAME JUGA IKUT NEON */
-body[data-theme="light"] .photo-box img {
-  border: 2px solid #22c55e;
+body[data-theme="light"] .wa-float {
+  background: #22c55e;
 }
