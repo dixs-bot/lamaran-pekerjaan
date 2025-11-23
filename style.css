@@ -94,26 +94,36 @@ a {
   overflow: hidden;
 }
 
+/* VIDEO BACKGROUND */
 .hero-video {
   position: absolute;
   inset: 0;
   width: 100%;
-  height: 100%;
+  height: 120%;       /* sedikit lebih tinggi untuk parallax */
   object-fit: cover;
   z-index: 0;
   opacity: 1;
-  filter: brightness(1.45); /* adjust brightness */
+  filter: brightness(1.45) saturate(1.2) contrast(1.1);
+  transform: translateY(0);        /* akan diubah dari JS */
+  will-change: transform;          /* bantu performa */
 }
 
+/* OVERLAY + TEKS */
 .hero-overlay {
   position: absolute;
   inset: 0;
   z-index: 1;
+  pointer-events: none;
+  background-image: linear-gradient(
+      rgba(15, 23, 42, 0.75),
+      rgba(15, 23, 42, 0.9)
+    );
 }
 
 .hero-inner {
   position: relative;
   z-index: 2;
+  padding: 2.6rem 0 2.2rem;
 }
 
 .hero-text {
