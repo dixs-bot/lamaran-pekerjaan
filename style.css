@@ -329,3 +329,15 @@ body[data-theme="light"] a {
 body[data-theme="light"] .wa-float {
   background: #22c55e;
 }
+/* ===== FIX PROJECT CARD LIGHT MODE ===== */
+body[data-theme="light"] .project-item {
+  background: #ffffff !important;      /* putih */
+  border: 1px solid #dddddd !important;
+  box-shadow: 0 0 12px rgba(0,0,0,0.1); /* soft glow profesional */
+}
+
+body[data-theme="light"] .project-title,
+body[data-theme="light"] .project-body,
+body[data-theme="light"] .project-link {
+  color: #000000 !important;           /* hitam agar jelas */
+}
