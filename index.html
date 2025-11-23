@@ -255,5 +255,20 @@
   >
     WA
   </a>
+  <script>
+  // Parallax scroll untuk video hero
+  const heroVideo = document.querySelector(".hero-video");
+
+  function handleParallax() {
+    if (!heroVideo) return;
+    const scrollY = window.scrollY || window.pageYOffset;
+    const speed = 0.35; // ubah angka ini kalau mau lebih pelan/cepat
+    const translate = scrollY * speed;
+
+    heroVideo.style.transform = `translateY(${translate}px)`;
+  }
+
+  window.addEventListener("scroll", handleParallax);
+</script>
 </body>
 </html>
