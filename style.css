@@ -607,3 +607,25 @@ body[data-theme="light"] a {
 .photo-box img {
   border: 2px solid #22c55e;             /* aksen neon biar keren */
 }
+/* ===== FIX BIODATA ON LIGHT MODE (WHITE MODE) ===== */
+body[data-theme="light"] .biodata-table {
+  background: #000000 !important;      /* full black */
+  color: #ffffff !important;           /* text white */
+  border: 1px solid #22c55e !important;  /* neon border */
+}
+
+body[data-theme="light"] .biodata-table th,
+body[data-theme="light"] .biodata-table td {
+  color: #ffffff !important;           /* text color white */
+  border-bottom: 1px solid #22c55e !important; /* neon green lines */
+}
+
+body[data-theme="light"] .biodata-table th {
+  background: #0a0a0a !important;      /* header slightly lighter black */
+  font-weight: 600;
+}
+
+/* FOTO FRAME JUGA IKUT NEON */
+body[data-theme="light"] .photo-box img {
+  border: 2px solid #22c55e;
+}
