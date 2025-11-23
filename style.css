@@ -183,6 +183,10 @@ a {
   box-shadow: 0 0 18px rgba(34, 197, 94, 0.5);
 }
 
+.btn-primary:hover {
+  background: #16a34a;
+}
+
 .btn-outline {
   background: transparent;
   color: #22c55e;
@@ -218,12 +222,32 @@ a {
   overflow: hidden;
   border: 1px solid #1f2933;
   box-shadow: 0 0 16px rgba(15, 23, 42, 0.7);
+  display: flex;
+  flex-direction: column;
 }
 
 .project-item img {
   width: 100%;
   height: 140px;
   object-fit: cover;
+  display: block;
+}
+
+.project-body {
+  padding: 0.7rem 0.8rem 0.9rem;
+  font-size: 0.88rem;
+}
+
+.project-title {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 0.35rem;
+  font-size: 0.82rem;
+  color: #22c55e;
 }
 
 /* ======================= BIODATA ======================= */
@@ -316,6 +340,7 @@ body[data-theme="light"] .hero-overlay {
   );
 }
 
+/* teks jadi hitam di light mode */
 body[data-theme="light"] .biodata-table th,
 body[data-theme="light"] .biodata-table td,
 body[data-theme="light"] p,
@@ -326,18 +351,28 @@ body[data-theme="light"] a {
   color: #000000 !important;
 }
 
+/* WA button tetap hijau */
 body[data-theme="light"] .wa-float {
   background: #22c55e;
 }
-/* ===== FIX PROJECT CARD LIGHT MODE ===== */
+
+/* PROJECT card full putih dan teks hitam di light mode */
 body[data-theme="light"] .project-item {
-  background: #ffffff !important;      /* putih */
-  border: 1px solid #dddddd !important;
-  box-shadow: 0 0 12px rgba(0,0,0,0.1); /* soft glow profesional */
+  background: #ffffff !important;
+  border: 1px solid #d1d5db !important;
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.12) !important;
+}
+
+body[data-theme="light"] .project-body {
+  background: #ffffff !important;
+  color: #000000 !important;
+}
+
+body[data-theme="light"] .project-item img {
+  background: #ffffff !important;
 }
 
 body[data-theme="light"] .project-title,
-body[data-theme="light"] .project-body,
 body[data-theme="light"] .project-link {
-  color: #000000 !important;           /* hitam agar jelas */
+  color: #000000 !important;
 }
