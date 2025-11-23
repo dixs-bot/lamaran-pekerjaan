@@ -117,6 +117,7 @@ a {
   transform: translateY(0);
   will-change: transform;
   z-index: 0;
+  image-rendering: crisp-edges;
 }
 
 .hero-overlay {
