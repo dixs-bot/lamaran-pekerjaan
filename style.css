@@ -580,3 +580,30 @@ body[data-theme="light"] .biodata-table th {
 body[data-theme="light"] a {
   color: #000000 !important;
 }
+/* ===== FIX BIODATA ON DARK MODE / FULL BLACK ===== */
+.biodata-table {
+  background: #0a0a0a !important;        /* hitam pekat */
+  color: #ffffff !important;             /* buat text putih */
+  border: 1px solid #333 !important;     /* border abu gelap */
+}
+
+.biodata-table th,
+.biodata-table td {
+  color: #ffffff !important;             /* text putih */
+  border-bottom: 1px solid #333 !important;
+}
+
+.biodata-table th {
+  background: #111 !important;           /* header sedikit lebih terang */
+  font-weight: 600;
+}
+
+.biodata-table tr:last-child td,
+.biodata-table tr:last-child th {
+  border-bottom: none;
+}
+
+/* Foto biodata border */
+.photo-box img {
+  border: 2px solid #22c55e;             /* aksen neon biar keren */
+}
