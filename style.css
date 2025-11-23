@@ -401,22 +401,10 @@ a {
 }
 
 /* WHATSAPP FLOAT */
-.wa-float {
-  position: fixed;
-  right: 16px;
-  bottom: 16px;
-  width: 52px;
-  height: 52px;
-  border-radius: 999px;
-  background: #22c55e;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #020617;
-  font-size: 0.9rem;
-  font-weight: 700;
-  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.45);
-  z-index: 30;
+.wa-icon {
+  width: 32px;
+  height: 32px;
+  filter: drop-shadow(0 0 8px #22c55e);
 }
 
 /* RESPONSIVE */
