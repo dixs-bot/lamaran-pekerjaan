@@ -2,7 +2,7 @@ import { experiences } from "../../data/experience";
 
 function ExperienceSection() {
   return (
-    <section id="pengalaman" className="section">
+    <section id="pengalaman" className="section reveal-on-scroll">
       <div className="container">
         <h2>Pengalaman Kerja</h2>
         <p className="section-note">

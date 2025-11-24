@@ -1,9 +1,9 @@
 function ProfilSection() {
   return (
-    <section id="profil" className="section">
+    <section id="profil" className="section reveal-on-scroll">
       <div className="container">
         <h2>Profil</h2>
-        <p>Konten profil akan dipindah dari HTML lama ke sini.</p>
+        {/* dst... */}
       </div>
     </section>
   );

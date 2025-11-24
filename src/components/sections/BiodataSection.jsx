@@ -9,7 +9,7 @@ function BiodataSection() {
 
         <div className="biodata-card">
           <div className="biodata-photo">
-            <img src="/foto-diki.jpg" alt="Foto Diki Wahyudin" />
+            <img src="/Diki.png" alt="Foto Diki Wahyudin" />
           </div>
 
           <div className="biodata-info">

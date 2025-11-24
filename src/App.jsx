@@ -10,9 +10,10 @@ import BiodataSection from "./components/sections/BiodataSection";
 import ContactSection from "./components/sections/ContactSection";
 import Footer from "./components/layout/Footer";
 import WhatsAppFloat from "./components/layout/WhatsAppFloat";
-
+import { useScrollReveal } from "./hooks/useScrollReveal";
 function App() {
-  return (
+useScrollReveal();  
+return (
     <div className="app-root">
       <Topbar />
 

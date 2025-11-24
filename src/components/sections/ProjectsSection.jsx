@@ -2,7 +2,7 @@ import { projects } from "../../data/projects";
 
 function ProjectsSection() {
   return (
-    <section id="project" className="section">
+    <section id="project" className="section reveal-on-scroll">
       <div className="container">
         <h2>Project Web</h2>
         <p className="section-note">Contoh project dummy dapat diganti project asli.</p>
