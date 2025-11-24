@@ -1,4 +1,8 @@
+import { useTheme } from "../../hooks/useTheme";
+
 function Topbar() {
+  const { theme, toggleTheme } = useTheme();
+
   return (
     <header className="topbar">
       <div className="container topbar-inner">
@@ -6,7 +10,7 @@ function Topbar() {
           <span className="brand-mark">DW</span>
           <div>
             <div className="brand-name">Diki Wahyudin</div>
-            <div className="brand-role">Web Design &amp; Frontend</div>
+            <div className="brand-role">Desain Web &amp; Frontend</div>
           </div>
         </div>
 
@@ -18,6 +22,15 @@ function Topbar() {
           <a href="#biodata">Biodata</a>
           <a href="#kontak">Kontak</a>
         </nav>
+
+        <button
+          type="button"
+          className="theme-toggle"
+          onClick={toggleTheme}
+          aria-label="Toggle theme"
+        >
+          {theme === "dark" ? "☀️" : "🌙"}
+        </button>
       </div>
     </header>
   );
